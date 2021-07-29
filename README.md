@@ -15,9 +15,16 @@ npm install
 
 
 
+To open tests:
+
+```
+npm run open
+```
+
 To run tests:
 
 ```
 npm run test
 ```
+
 
