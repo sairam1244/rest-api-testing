@@ -5,7 +5,6 @@ This repo is used for writing rest api testing of fake api's applications using 
 ## Setup
 
 Make sure node installed
-Make sure cypress installed
 
 ```
 git clone https://github.com/sairam1244/rest-api-testing
