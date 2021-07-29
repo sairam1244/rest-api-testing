@@ -1,0 +1,23 @@
+{
+  "name": "rest-api-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sairam1244/rest-api-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sairam1244/rest-api-testing/issues"
+  },
+  "homepage": "https://github.com/sairam1244/rest-api-testing#readme",
+  "dependencies": {
+    "cypress": "^8.0.0"
+  }
+}
