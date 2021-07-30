@@ -1,8 +1,8 @@
-describe("NEW POST", () => {
-  it("create new post", function () {
+describe("api testing on blog", () => {
+  it("create a new post", function () {
     cy.request({
       method: "POST",
-      url: "https://jsonplaceholder.typicode.com/posts",
+      url: `${Cypress.env("api_url")}/posts`,
       body: {
         title: "Automation",
         body: "sample",
@@ -22,20 +22,20 @@ describe("NEW POST", () => {
     });
   });
 
-  it("Test GET all posts", function () {
+  it("Get all posts", function () {
     cy.request({
       method: "GET",
-      url: "https://jsonplaceholder.typicode.com/posts",
+      url: `${Cypress.env("api_url")}/posts`,
     }).then(function (response) {
       expect(response.status).to.be.eq(200);
       expect(response.body.length).to.be.eq(100);
     });
   });
 
-  it("Test an update existing post", function () {
+  it("Update an existing post", function () {
     cy.request({
       method: "PUT",
-      url: "https://jsonplaceholder.typicode.com/posts/1",
+      url: `${Cypress.env("api_url")}/posts/1`,
       body: {
         id: 1,
         title: "Automation Update",
@@ -56,19 +56,19 @@ describe("NEW POST", () => {
     });
   });
 
-  it("Test Delete existing posts", function () {
+  it("Delete an existing posts", function () {
     cy.request({
       method: "DELETE",
-      url: "https://jsonplaceholder.typicode.com/posts/1",
+      url: `${Cypress.env("api_url")}/posts/1`,
     }).then(function (response) {
       expect(response.status).to.be.eq(200);
       expect(response.body).to.be.empty;
     });
   });
 
-  it("filtering the posts for the first user and checking the results", function () {
+  it("Filtering the posts for the first user and checking the results", function () {
     cy.request({
-      url: "https://jsonplaceholder.typicode.com/posts?userId=1",
+      url: `${Cypress.env("api_url")}/posts?userId=1`,
     }).then(function (response) {
       expect(response.status).to.be.eq(200);
       expect(response.body.length).to.be.eq(10);
@@ -78,10 +78,10 @@ describe("NEW POST", () => {
     });
   });
   
-  it("Test GET existing post", function () {
+  it("Get an existing post", function () {
     cy.request({
       method: "GET",
-      url: "https://jsonplaceholder.typicode.com/posts/1",
+      url: `${Cypress.env("api_url")}/posts/1`,
     }).then(function (response) {
       expect(response.status).to.be.eq(200);
       expect(response.body.userId).to.be.eq(1);
