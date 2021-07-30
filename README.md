@@ -1,6 +1,6 @@
 # Rest API testing for blog
 
-This repo is used for writing rest api testing of fake api's applications using [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html).
+This repo is used for writing rest api testing of blog api's applications using [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html).
 
 ## Setup
 
